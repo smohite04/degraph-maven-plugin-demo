@@ -1,0 +1,84 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <artifactId>CompanyProject</artifactId>
+    <groupId>com.mycompany</groupId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+
+    <modules>
+        <module>Main</module>
+        <module>Main/First</module>
+        <module>Main/First/a</module>
+        <module>Main/First/a/a1</module>
+        <module>Main/First/a/a2</module>
+        <module>Main/Second</module>
+        <module>Main/Second/b</module>
+        <module>Main/Second/b/b1</module>
+    </modules>
+
+<!--    <dependencyManagement>-->
+<!--        <dependencies>-->
+<!--            <dependency>-->
+<!--                <groupId>com.mysema.querydsl</groupId>-->
+<!--                <artifactId>querydsl-core</artifactId>-->
+<!--                <version>3.7.4</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>commons-codec</groupId>-->
+<!--                <artifactId>commons-codec</artifactId>-->
+<!--                <version>1.15</version>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>com.google.guava</groupId>-->
+<!--                <artifactId>guava</artifactId>-->
+<!--                <version>31.1-jre</version>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>*</groupId>-->
+<!--                        <artifactId>*</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>org.springframework</groupId>-->
+<!--                <artifactId>spring-core</artifactId>-->
+<!--                <version>5.3.22</version>-->
+<!--                <exclusions>-->
+<!--                    <exclusion>-->
+<!--                        <groupId>*</groupId>-->
+<!--                        <artifactId>*</artifactId>-->
+<!--                    </exclusion>-->
+<!--                </exclusions>-->
+<!--            </dependency>-->
+<!--            <dependency>-->
+<!--                <groupId>junit</groupId>-->
+<!--                <artifactId>junit</artifactId>-->
+<!--                <version>4.13.2</version>-->
+<!--                <scope>test</scope>-->
+<!--            </dependency>-->
+<!--        </dependencies>-->
+<!--    </dependencyManagement>-->
+
+    <build>
+        <!-- To define the plugin version in your parent POM -->
+        <pluginManagement>
+            <plugins>
+                <plugin>
+                    <groupId>com.github.ferstl</groupId>
+                    <artifactId>depgraph-maven-plugin</artifactId>
+                    <version>4.0.2</version>
+                </plugin>
+            </plugins>
+        </pluginManagement>
+        <!-- To use the plugin goals in your POM or parent POM -->
+        <plugins>
+            <plugin>
+                <groupId>com.github.ferstl</groupId>
+                <artifactId>depgraph-maven-plugin</artifactId>
+                <version>4.0.2</version>
+            </plugin>
+        </plugins>
+    </build>
+</project>
