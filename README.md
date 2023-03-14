@@ -1,0 +1,1 @@
+# degraph-maven-plugin-demo. 
